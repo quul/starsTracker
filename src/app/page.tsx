@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { getServerSession } from "next-auth/next"
-import {authOptions} from "@/app/api/auth/[...nextauth]/route";
+import {authOptions} from "@/lib/nextAuth";
 
 
 export default function Home() {
-  const session = getServerSession()
+  const session = getServerSession(authOptions)
   return (
     <main>
 
